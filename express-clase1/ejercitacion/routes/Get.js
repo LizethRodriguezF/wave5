@@ -10,8 +10,9 @@ const router = express.Router();
  ************************************************************/
 // Tu código acá
 
-
-
+router.get('/', (req, res) => {
+	res.send('¡Hola mundo!')
+})
 
 
 /*************************************************************
@@ -22,9 +23,14 @@ const router = express.Router();
 	http://localhost:3000/api/products
  *************************************************************/
 // Tu código acá
-let products;
+let products = 
+[{id: 1, name:'liz', price: 20}, 
+{id: 2, name:'liz', price: 20}, 
+{id: 3, name:'liz', price: 20}]
 
-
+router.get('/products',(req, res)=>{
+	res.json({products})
+})
 
 
 
